@@ -1,0 +1,41 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #fff;
+}
+
+.block {
+    border-radius: 10px;
+    padding: 20px;
+}
+
+h1,
+label {
+    color: #fff;
+    text-transform: uppercase;
+}
+
+#deleallpro {
+    display: none;
+    margin: auto;
+    margin-top: 10px;
+}
+
+#delall {
+    display: none;
+    margin: auto;
+    margin-top: 10px;
+}
+
+.modal title {
+    color: black;
+}
+
+#counttitle {
+    font-size: 20px;
+    text-transform: none;
+}
