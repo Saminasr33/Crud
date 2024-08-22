@@ -1,1 +1,77 @@
+<html>
+<head>
+<title>
+Clock
+</title>
+<style>
+Body{
+    Display:flex;
+    Justify-content:center;
+    align-items:center;
+}
+.container{
+    Width:300px;
+    Height:300px;
+    Background-color:gray;
+    Border-radius:50%;
+    Box-shadow:0 0 20px #000;
+    Border:3px solid #000;
+    Position:relative;
+}
+.hand{
+    Position:absolute;
+    Left:50%;
+    Bottom:50%;
+    Background-color:#222;
+    Transform-origin:Bottom center;
+    Border-radius:6px;
+}
+.hour{
+    Width :8px;
+    Height :80px;
+    Margin-left:-4px;
+}
+.minute{
+    Width :6px;
+    Height :100px;
+    Margin-left:-3px;
+}
+.second{
+    Width :4px;
+    Height :120px;
+    Margin-left:-2px;
+}
+</style>
+</head>
+<body>
+<div class="container">
+<div class="hand hour"></div>
+<div class="hand minute"></div>
+<div class="hand second"></div>
+</div>
 
+
+<script>
+Function updateclock(){
+    Const now=new Date();
+    Const hours=now.getHours()%12;
+    Const minutes=now.getMinutes();
+    Const seconds=now.getSeconds();
+    
+    Const hoursangel =(hours*30)+(minutes*.0.5);
+    Const minutesangel=minutes*6;
+    Const secondsangel=seconds*6;
+    
+    
+    Document.querySelector(".hour").style.Transform=`rotate(${hoursangel}deg)`;
+    Document.querySelector(".minute").style.Transform=`rotate(${minutesangel}deg)`;
+    Document.querySelector(".second").style.Transform=`rotate(${secondsangel}deg)`;
+}
+
+
+SetInterval(updateclock,1000);
+
+
+</script>
+</body>
+</html>
